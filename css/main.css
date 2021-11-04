@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    background-color: whitesmoke;
 }
 .tt{
 
@@ -354,4 +355,124 @@ a{
 
 }
 
+#glowing{
+  text-transform: uppercase;
+  color:#fff;
+ 
+  
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  margin:0;
+  text-shadow:0px -1px 2px white,
+  0px -3px 6px rgba(242,125,12,1),
+  0px -6px 12px rgba(255,150,100,1),
+  0px -10px 20px rgba(242,125,12,1),
+  0px -15px 30px rgba(255,50,50,1),
+  0px -21px 42px rgba(240,127,19,1);
+  animation:effect 0.01s ease infinite, colorChange 10s linear infinite;
+} 
+@keyframes effect {
+50%{
+  text-shadow:0px -4px 8px white,
+  0px -12px 24px rgba(242,125,12,1),
+  0px -24px 48px rgba(255,150,100,1),
+  0px -40px 80px rgba(242,125,12,1),
+  0px -60px 120px rgba(255,50,50,1),
+  0px -84px 168px rgba(240,127,19,1);
+}      
+}
+@keyframes colorChange {
+  to{filter:hue-rotate(360deg)}
+}
+
+/*shimmering text */
+
+.shimmer{
+  /* styling stuff */
+  font-family:"Alegreya Sans";
+  font-weight:300;
+  
+  margin:0 auto;
+  
+  text-align: center;
+  color: rgba(39, 179, 189, 0.1);
+}
+.shimmer {
+/* the shimmer magic */
+background: -webkit-gradient(linear,left top,right top,from(#222),to(#222),color-stop(.5,#fff));
+background: -moz-gradient(linear,left top,right top,from(#222),to(#222),color-stop(.5,#fff));
+background: gradient(linear,left top,right top,from(#222),to(#222),color-stop(.5,#fff));
+-webkit-background-size: 125px 100%;
+-moz-background-size: 125px 100%;
+background-size: 125px 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+background-clip: text;
+-webkit-animation-name: shimmer;
+-moz-animation-name: shimmer;
+-webkit-animation-name: shimmer;
+animation-name: shimmer;
+-webkit-animation-duration: 2s;
+-moz-animation-duration: 2s;
+-webkit-animation-duration: 2s;
+animation-duration: 2s;
+-webkit-animation-iteration-count: infinite;
+-moz-animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+background-repeat: no-repeat;
+background-position: 0 0;
+background-color: #222;
+}
+
+@-moz-keyframes shimmer {
+0% {
+  background-position: top left;
+}
+
+100% {
+  background-position: top right;
+}
+}
+
+@-webkit-keyframes shimmer {
+0% {
+  background-position: top left;
+}
+
+100% {
+  background-position: top right;
+}
+}
+
+@-o-keyframes shimmer {
+0% {
+  background-position: top left;
+}
+
+100% {
+  background-position: top right;
+}
+}
+
+@-ms-keyframes shimmer {
+0% {
+  background-position: top left;
+}
+
+100% {
+  background-position: top right;
+}
+}
+
+@keyframes shimmer {
+0% {
+  background-position: top left;
+}
+
+100% {
+  background-position: top right;
+}
+}
 
